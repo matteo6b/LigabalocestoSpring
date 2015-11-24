@@ -1,5 +1,7 @@
 package demo.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Calendar;
 import java.util.Date;
@@ -31,7 +33,7 @@ public class Jugador {
 
     @Column
     private String posicion;
-
+    @JsonIgnore
    @ManyToOne
     private Equipo equipo;
     public Jugador(String name,Date fecha, Integer canastasTotal, Integer rebotesTotal,Integer asistenciasTotal, String posicion){

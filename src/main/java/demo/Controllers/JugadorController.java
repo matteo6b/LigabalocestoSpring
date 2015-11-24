@@ -24,6 +24,7 @@ public class JugadorController {
     @RequestMapping(method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public Jugador save(@RequestBody Jugador jugador) {
+
         return jugadorRepository.save(jugador);
     }
 
